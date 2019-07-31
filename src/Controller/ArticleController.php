@@ -5,12 +5,11 @@ namespace App\Controller;
 
 
 use App\Service\MarkdownHelper;
-use Michelf\MarkdownInterface;
 use Psr\Log\LoggerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Cache\Adapter\AdapterInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
 class ArticleController extends AbstractController
@@ -51,13 +50,6 @@ EOF;
 
         $articleContent = $markdownHelper->parse($articleContent);
 
-        $item = $cache->getItem('markdown'.md5($articleContent));
-        if(!$item->isHit()){
-            $item->set($markdown->transform($articleContent));
-            $cache->save($item);
-        }
-        $articleContent = $item->get();
-
         return $this->render('article/show.html.twig',[
             'title' => ucwords(str_replace('-', ' ', $slug)),
             'comments' => $comments,
@@ -65,7 +57,7 @@ EOF;
             'articleContent' => $articleContent,
         ]);
 
-        return new Response($html);
+
     }
 
     /**
