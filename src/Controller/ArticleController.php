@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Service\MarkdownHelper;
 use Michelf\MarkdownInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,7 +25,7 @@ class ArticleController extends AbstractController
     /**
      * @Route("/news/{slug}", name="article_show")
      */
-    public function show($slug, MarkdownInterface $markdown, AdapterInterface $cache){
+    public function show($slug, MarkdownHelper $markdownHelper){
         $comments = [
             'I ate a normal rock once. It did NOT taste like bacon!',
             'Woohoo! I\'m going on an all-asteroid diet!',
@@ -48,7 +49,7 @@ class ArticleController extends AbstractController
             fugiat.
 EOF;
 
-        //dump($cache);die();
+        $articleContent = $markdownHelper->parse($articleContent);
 
         $item = $cache->getItem('markdown'.md5($articleContent));
         if(!$item->isHit()){
