@@ -48,14 +48,14 @@ class ArticleController extends AbstractController
             fugiat.
 EOF;
 
+        //dump($cache);die();
+
         $item = $cache->getItem('markdown'.md5($articleContent));
         if(!$item->isHit()){
             $item->set($markdown->transform($articleContent));
             $cache->save($item);
         }
         $articleContent = $item->get();
-
-        //dump($cache);die();
 
         return $this->render('article/show.html.twig',[
             'title' => ucwords(str_replace('-', ' ', $slug)),
