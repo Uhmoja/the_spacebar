@@ -4,7 +4,7 @@
 namespace App\Helper;
 
 
-class LoggerTrait
+trait LoggerTrait
 {
     /**
      * @var LoggerInterface|null
