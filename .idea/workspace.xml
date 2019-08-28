@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563be801-709b-4ad9-a014-1c3f373f4f86" name="Default Changelist" comment="" />
+    <list default="true" id="563be801-709b-4ad9-a014-1c3f373f4f86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tag.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +35,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="246" selection-start-line="246" selection-end-line="246" />
+              <folding>
+                <element signature="e#30#67#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/CommentRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="487">
@@ -52,19 +67,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Tag.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="487">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
               <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
+                <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataFixtures/TagFixture.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -114,15 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/content_base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -183,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/DataFixtures/BaseFixture.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/A0CommentFixture.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/CommentFixture.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Repository/ArticleRepository.php" />
         <option value="$PROJECT_DIR$/templates/article/homepage.html.twig" />
         <option value="$PROJECT_DIR$/templates/article/show.html.twig" />
@@ -194,9 +199,10 @@
         <option value="$PROJECT_DIR$/src/Controller/CommentAdminController.php" />
         <option value="$PROJECT_DIR$/templates/comment_admin/index.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/knp_paginator.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Comment.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Tag.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/TagFixture.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Comment.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Article.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Tag.php" />
       </list>
     </option>
   </component>
@@ -407,14 +413,7 @@
       <workItem from="1566823051003" duration="4505000" />
       <workItem from="1566905783568" duration="165000" />
       <workItem from="1566905966162" duration="1370000" />
-      <workItem from="1566908076890" duration="9702000" />
-    </task>
-    <task id="LOCAL-00006" summary="Fin tuto 2 chap 7">
-      <created>1564559424910</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1564559424910</updated>
+      <workItem from="1566908076890" duration="10028000" />
     </task>
     <task id="LOCAL-00007" summary="Fin tuto 2 chap 8">
       <created>1564560342940</created>
@@ -752,11 +751,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566980242791</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Fin tuto 4 chap 16">
+      <created>1566980660088</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1566980660088</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56740000" />
+    <option name="totallyTimeSpent" value="57066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,7 +827,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fin tuto 3 chap 10" />
     <MESSAGE value="Fin tuto 3 chap 11" />
     <MESSAGE value="Fin tuto 3 chap 12" />
     <MESSAGE value="Fin tuto 3 chap 13" />
@@ -846,7 +851,8 @@
     <MESSAGE value="Fin tuto 4 chap 13" />
     <MESSAGE value="Fin tuto 4 chap 14" />
     <MESSAGE value="Fin tuto 4 chap 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fin tuto 4 chap 15" />
+    <MESSAGE value="Fin tuto 4 chap 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin tuto 4 chap 16" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
@@ -1127,16 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-          <folding>
-            <element signature="e#30#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/ArticleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1216,6 +1212,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/TagFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#36#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -1226,22 +1232,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Tag.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
           <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
+            <element signature="e#30#67#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/TagFixture.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Tag.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="487">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
           <folding>
-            <element signature="e#36#55#0#PHP" expanded="true" />
+            <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Repository\ArticleRepository;
+use App\Repository\CommentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;
@@ -66,9 +66,15 @@ class Article
      */
     private $comments;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Tag", inversedBy="articles")
+     */
+    private $tags;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
+        $this->tags = new ArrayCollection();
     }
 
     public function getId()
@@ -152,8 +158,6 @@ class Article
     public function incrementHeartCount(): self
     {
         $this->heartCount = $this->heartCount + 1;
-
-        return $this;
     }
 
     public function getImageFilename(): ?string
@@ -186,7 +190,7 @@ class Article
      */
     public function getNonDeletedComments(): Collection
     {
-        $criteria = ArticleRepository::createNonDeletedCriteria();
+        $criteria = CommentRepository::createNonDeletedCriteria();
 
         return $this->comments->matching($criteria);
     }
@@ -209,6 +213,32 @@ class Article
             if ($comment->getArticle() === $this) {
                 $comment->setArticle(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    public function addTag(Tag $tag): self
+    {
+        if (!$this->tags->contains($tag)) {
+            $this->tags[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): self
+    {
+        if ($this->tags->contains($tag)) {
+            $this->tags->removeElement($tag);
         }
 
         return $this;
