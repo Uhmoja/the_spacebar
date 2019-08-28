@@ -27,6 +27,6 @@ class CommentFixture extends BaseFixture implements DependentFixtureInterface
 
     public function getDependencies()
     {
-        return [ArticleFixture::class];
+        return [ArticleFixtures::class];
     }
 }
